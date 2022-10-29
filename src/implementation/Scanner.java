@@ -3,6 +3,8 @@ package implementation;
 import java.io.*;
 import java.lang.String;
 
+import static implementation.Utils.OUTPUT_FILE_TXT;
+
 public class Scanner extends TokenType {
     private static File file;
     private static BufferedWriter bufferedWriter;//write buffer
@@ -84,7 +86,7 @@ public class Scanner extends TokenType {
         int index = 0;
 
         try {
-            file = new File("src/resources/output.txt");
+            file = new File(OUTPUT_FILE_TXT);
             bufferedWriter = new BufferedWriter(new FileWriter(file));
             bufferedReader = new BufferedReader(new FileReader(filePath));
 
