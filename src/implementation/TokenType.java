@@ -10,5 +10,5 @@ public class TokenType {
     public static char[] delimiter = new char[]{'(', ')', '*', '/',
             '+', '-', '<', '=',
             '>', '!', ';', ',',
-            '[', ']', '{', '}', '#', '&'};
+            '[', ']', '{', '}', '#'};
 }
