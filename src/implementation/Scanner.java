@@ -1,12 +1,10 @@
 package implementation;
 
 import java.io.*;
-import java.lang.String;
 
 import static implementation.Utils.OUTPUT_FILE_TXT;
 
 public class Scanner extends TokenType {
-    private static File file;
     private static BufferedWriter bufferedWriter;//write buffer
     private static BufferedReader bufferedReader;//read buffer
     private static final StringBuilder sb = new StringBuilder();
@@ -16,8 +14,8 @@ public class Scanner extends TokenType {
      */
     public static boolean isKeyword(String str) {
 
-        for (String s : TokenType.keyword) {
-            if (s.equals(str)) {
+        for (String string : TokenType.keyword) {
+            if (string.equals(str)) {
                 return true;
             }
         }
@@ -47,8 +45,8 @@ public class Scanner extends TokenType {
     public static boolean isDelimiter(char ch) {
 
 
-        for (char c : TokenType.delimiter) {
-            if (ch == c) {
+        for (char symbol : TokenType.delimiter) {
+            if (ch == symbol) {
                 return true;
             }
         }
@@ -56,7 +54,7 @@ public class Scanner extends TokenType {
     }
 
     /**
-     * citim continutul fisierului
+     * citim continutul fisierului de input
      */
     public static StringBuilder readFile(StringBuilder sb, String fileSource) {
 
@@ -86,15 +84,15 @@ public class Scanner extends TokenType {
         int index = 0;
 
         try {
-            file = new File(OUTPUT_FILE_TXT);
+            File file = new File(OUTPUT_FILE_TXT);
             bufferedWriter = new BufferedWriter(new FileWriter(file));
             bufferedReader = new BufferedReader(new FileReader(filePath));
 
             bufferedWriter.write("*****************************************" + "\r\n" +
                     "C Minus Minus Lexical Analyzer Result:" + "\r\n" +
-                    "*****************************************" + "\r\n");
+                    "*****************************************" + "\r\n\n");
 
-            StringBuilder line = readFile(sb, filePath);//stocam continutul fisierului
+            StringBuilder line = readFile(sb, filePath); //stocam continutul fisierului
             System.out.println(line);
 
             while (index < line.length()) {  //citim linia
@@ -126,7 +124,7 @@ public class Scanner extends TokenType {
                      */
                     if (isKeyword(sb1.toString())) {
 
-                        bufferedWriter.write("          reserved word:" + sb1); //afisez cuvantul cheie
+                        bufferedWriter.write("          RESERVED WORD: " + sb1); //afisez cuvantul cheie
                         bufferedWriter.newLine();//trec pe o noua linie
                     }
                     /**
@@ -135,8 +133,8 @@ public class Scanner extends TokenType {
                      * apoi trec pe o linie noua
                      */
                     else {
-                        bufferedWriter.write("          ID,name=" + sb1);
-                        bufferedWriter.newLine();
+                        bufferedWriter.write("          ID,NAME: " + sb1); //afisez identificatorul
+                        bufferedWriter.newLine();  //trec pe o noua linie
                     }
                 }
 
@@ -153,46 +151,46 @@ public class Scanner extends TokenType {
                      * afisez caracterul si trec pe o noua linie incrementand indexul
                      */
                     if (ch == ';' || ch == ',' || ch == '=') {
-                        bufferedWriter.write("       TERMINAL SYMBOL    " + ch);
-                        bufferedWriter.newLine();
-                        index++;
+                        bufferedWriter.write("      TERMINAL SYMBOL: " + ch);//afisez simbulul terminal
+                        bufferedWriter.newLine();//trec pe o noua linie
+                        index++;//incrementez indexul
                     }
 
                     /**
                      * merg pe acceeasi abordare de mai sus si pentru restul caracterelor speciale/terminale
                      */
                     else if (ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}') {
-                        bufferedWriter.write("        TERMINAL SYMBOL   " + ch);
-                        bufferedWriter.newLine();
+                        bufferedWriter.write("        TERMINAL SYMBOL   " + ch);//afisez caracterul terminal
+                        bufferedWriter.newLine();//trec pe o noua linie si incrementez indexul
                         index++;
                     } else if (ch == '+' || ch == '-' || ch == '*') {
-                        bufferedWriter.write("       TERMINAL SYMBOL    " + ch);
-                        bufferedWriter.newLine();
+                        bufferedWriter.write("       TERMINAL SYMBOL: " + ch);//aceeasi abordare ca mai sus
+                        bufferedWriter.newLine();//trec pe o noua linie si incrementez indexul
                         index++;
                     }
                     /**
                      * aici incerc sa verific daca cuvantul special este un cuvant dublu
                      * de ex: ' == '
-                     * apoi il scriu
+                     * apoi il afisez
                      */
                     else if (ch == '>' || ch == '<' || ch == '=') {
 
                         sb1.append(ch);
                         char nextCh = line.charAt(++index);
 
-                        if (nextCh == '=') {
+                        if (nextCh == '=') { //determin daca simbolul este un simbol dublu
                             sb1.append(nextCh);
-                            bufferedWriter.write("        TERMINAL SYMBOL   " + sb1);
-                            bufferedWriter.newLine();
-                            index++;
+                            bufferedWriter.write("        TERMINAL SYMBOL: " + sb1);//il afisez
+                            bufferedWriter.newLine();//trec pe o noua linie
+                            index++;//incrementez indexul
                         } else {
-                            bufferedWriter.write("        TERMINAL SYMBOL   " + ch);
+                            bufferedWriter.write("        TERMINAL SYMBOL: " + ch);
                             bufferedWriter.newLine();
                         }
-                    } else if (ch == '/') {
+                    } else if (ch == '/') { // determin daca simbolul este // pentru comentariu
                         sb1.append(ch);
 
-                        if (index == line.length() - 1) {
+                        if (index == line.length() - 1) {//citim pana la sfarsitul randului
                             break;
                         }
 
@@ -200,21 +198,22 @@ public class Scanner extends TokenType {
                         /**
                          * verific daca este un comentariu de forma /*
                          */
-                        if (ch == '*' || ch == '#') {
+                        if (ch == '*') {
                             while (true) {
                                 ch = line.charAt(++index);
                                 if (ch == '*') {// am un comentariu pe mai multe randuri si il inchei */
                                     ch = line.charAt(++index);
-                                    if (ch == '/') {
+                                    if (ch == '/' || ch == '#') {
                                         ch = line.charAt(++index);
                                         break;
                                     }
                                 }
                             }
                         } else {
-                            bufferedWriter.write("        TERMINAL SYMBOL  " + sb1);
-                            bufferedWriter.newLine();
+                            bufferedWriter.write("        TERMINAL SYMBOL: " + sb1); //afisez simbolul terminal
+                            bufferedWriter.newLine();//trec pe o noua linie
                         }
+
                     }
                 }
                 /**
@@ -230,14 +229,14 @@ public class Scanner extends TokenType {
                             sb1.append(ch);
                             ch = line.charAt(++index);
                         }
-                        bufferedWriter.write("          NUM:" + sb1);
-                        bufferedWriter.newLine();
+                        bufferedWriter.write("          NUMERIC: " + sb1);//afisez daca caracterul este unul numeric
+                        bufferedWriter.newLine();//trec pe o noua linie
                     } else {
-                        bufferedWriter.write("          NUM:" + sb1);
+                        bufferedWriter.write("          NUMERIC: " + sb1);
                         bufferedWriter.newLine();
                     }
 
-                    if (isLetter(ch)) {
+                    if (isLetter(ch)) {//in cazul in care simbolul nu este valid, arunc un mesaj de genul 'eroare, simbol invalid'
                         System.out.println("Eroare: Simbol invalid!");
                     }
                 } else
@@ -246,7 +245,7 @@ public class Scanner extends TokenType {
 
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
+        } finally {//inchid fisierele
             try {
                 bufferedWriter.close();
                 bufferedReader.close();
