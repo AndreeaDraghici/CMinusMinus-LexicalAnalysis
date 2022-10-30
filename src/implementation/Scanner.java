@@ -160,7 +160,7 @@ public class Scanner extends TokenType {
                      * merg pe acceeasi abordare de mai sus si pentru restul caracterelor speciale/terminale
                      */
                     else if (ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}') {
-                        bufferedWriter.write("        TERMINAL SYMBOL   " + ch);//afisez caracterul terminal
+                        bufferedWriter.write("        TERMINAL SYMBOL: " + ch);//afisez caracterul terminal
                         bufferedWriter.newLine();//trec pe o noua linie si incrementez indexul
                         index++;
                     } else if (ch == '+' || ch == '-' || ch == '*') {
