@@ -163,7 +163,7 @@ public class Scanner extends TokenType {
                         bufferedWriter.write("        TERMINAL SYMBOL: " + ch);//afisez caracterul terminal
                         bufferedWriter.newLine();//trec pe o noua linie si incrementez indexul
                         index++;
-                    } else if (ch == '+' || ch == '-' || ch == '*') {
+                    } else if (ch == '+' || ch == '-' || ch == '*' || ch == '"' || ch == '&' || ch == '\n') {
                         bufferedWriter.write("       TERMINAL SYMBOL: " + ch);//aceeasi abordare ca mai sus
                         bufferedWriter.newLine();//trec pe o noua linie si incrementez indexul
                         index++;
@@ -173,7 +173,7 @@ public class Scanner extends TokenType {
                      * de ex: ' == '
                      * apoi il afisez
                      */
-                    else if (ch == '>' || ch == '<' || ch == '=') {
+                    else if (ch == '>' || ch == '<' || ch == '=' || ch == '&' || ch == '|') {
 
                         sb1.append(ch);
                         char nextCh = line.charAt(++index);
@@ -187,7 +187,7 @@ public class Scanner extends TokenType {
                             bufferedWriter.write("        TERMINAL SYMBOL: " + ch);
                             bufferedWriter.newLine();
                         }
-                    } else if (ch == '/') { // determin daca simbolul este // pentru comentariu
+                    } else if (ch == '/' || ch == '#') { // determin daca simbolul este // pentru comentariu sau #
                         sb1.append(ch);
 
                         if (index == line.length() - 1) {//citim pana la sfarsitul randului
@@ -203,7 +203,7 @@ public class Scanner extends TokenType {
                                 ch = line.charAt(++index);
                                 if (ch == '*') {// am un comentariu pe mai multe randuri si il inchei */
                                     ch = line.charAt(++index);
-                                    if (ch == '/' || ch == '#') {
+                                    if (ch == '/') {
                                         ch = line.charAt(++index);
                                         break;
                                     }
