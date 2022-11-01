@@ -13,6 +13,6 @@ Running using JRE 8
 
 - A document with lexical specifications, including finite automata.
 
-- The source basket (without executables) of the lexical analyzer.
+- The source code (without executables) of the lexical analyzer.
 
 - Test files.
