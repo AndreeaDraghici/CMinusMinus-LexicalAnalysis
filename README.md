@@ -1,5 +1,5 @@
 ## CMinusMinus-LexicalAnalysis
-This repo includes the lexical implementation ((hand coded) for  C-Minus-Minus  Project at Translator Design laboratory.
+This repo includes the lexical implementation (hand coded) for  C-Minus-Minus  Project at Translator Design laboratory.
 
 ## How to run
 
