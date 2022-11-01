@@ -9,6 +9,8 @@ Running using JRE 8
 
 **The repository contains:**
 
+- C-- requirements and specifications document.
+
 - A document with lexical specifications, including finite automata.
 
 - The source basket (without executables) of the lexical analyzer.
