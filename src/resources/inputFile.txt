@@ -1,16 +1,28 @@
-/* Loops */
-export sp3;
-sp3( bits32 n ) {
-bits32 s, p;
-s = 1; p = 1;
-loop:
-if n==1 {
-return( s, p );
-} else {
-s = s+n;
-p = p*n;
-n = n-1;
-goto loop;
 
+int x;
+
+int Calc(int i, int j, int k, int h)
+{
+	return i + j;
 }
+
+void main() {
+
+    int b;
+    int a;
+    int c;
+    string aux;
+    bool Mere;
+    c = a + a;
+    aux = 3 + 2;
+    Mere = false;
+	if( 5 )
+	{
+		c = a + b;
+	}
+
+	Calc();
+	
+	return 7;
+	
 }
