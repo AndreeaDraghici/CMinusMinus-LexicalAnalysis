@@ -1,65 +1,85 @@
 *****************************************
 C Minus Minus Lexical Analyzer Result:
 *****************************************
-          ID,name=export
-          ID,name=sp3
-       TERMINAL SYMBOL    ;
-          ID,name=sp3
-        TERMINAL SYMBOL   (
-          ID,name=bits32
-          ID,name=n
-        TERMINAL SYMBOL   )
-        TERMINAL SYMBOL   {
-          ID,name=bits32
-          ID,name=s
-       TERMINAL SYMBOL    ,
-          ID,name=p
-       TERMINAL SYMBOL    ;
-          ID,name=s
-       TERMINAL SYMBOL    =
-          NUM:1
-       TERMINAL SYMBOL    ;
-          ID,name=p
-       TERMINAL SYMBOL    =
-          NUM:1
-       TERMINAL SYMBOL    ;
-          ID,name=loop
-          reserved word:if
-          ID,name=n
-       TERMINAL SYMBOL    =
-       TERMINAL SYMBOL    =
-          NUM:1
-        TERMINAL SYMBOL   {
-          reserved word:return
-        TERMINAL SYMBOL   (
-          ID,name=s
-       TERMINAL SYMBOL    ,
-          ID,name=p
-        TERMINAL SYMBOL   )
-       TERMINAL SYMBOL    ;
-        TERMINAL SYMBOL   }
-          reserved word:else
-        TERMINAL SYMBOL   {
-          ID,name=s
-       TERMINAL SYMBOL    =
-          ID,name=s
-       TERMINAL SYMBOL    +
-          ID,name=n
-       TERMINAL SYMBOL    ;
-          ID,name=p
-       TERMINAL SYMBOL    =
-          ID,name=p
-       TERMINAL SYMBOL    *
-          ID,name=n
-       TERMINAL SYMBOL    ;
-          ID,name=n
-       TERMINAL SYMBOL    =
-          ID,name=n
-       TERMINAL SYMBOL    -
-          NUM:1
-       TERMINAL SYMBOL    ;
-          ID,name=goto
-          ID,name=loop
-       TERMINAL SYMBOL    ;
-        TERMINAL SYMBOL   }
-        TERMINAL SYMBOL   }
+
+          RESERVED WORD: int
+          IDENTIFIER (ID): x
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): Calc
+        TERMINAL SYMBOL: (
+          RESERVED WORD: int
+          IDENTIFIER (ID): i
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): j
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): k
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): h
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          RESERVED WORD: return
+          IDENTIFIER (ID): i
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): j
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
+          RESERVED WORD: void
+          IDENTIFIER (ID): main
+        TERMINAL SYMBOL: (
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          RESERVED WORD: int
+          IDENTIFIER (ID): b
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): a
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): string
+          IDENTIFIER (ID): aux
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: bool
+          IDENTIFIER (ID): Mere
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: =
+          IDENTIFIER (ID): a
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): a
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): aux
+      TERMINAL SYMBOL: =
+          NUMERIC: 3
+       TERMINAL SYMBOL: +
+          NUMERIC: 2
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): Mere
+      TERMINAL SYMBOL: =
+          RESERVED WORD: false
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: if
+        TERMINAL SYMBOL: (
+          NUMERIC: 5
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: =
+          IDENTIFIER (ID): a
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): b
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
+          IDENTIFIER (ID): Calc
+        TERMINAL SYMBOL: (
+        TERMINAL SYMBOL: )
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: return
+          NUMERIC: 7
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
