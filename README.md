@@ -3,7 +3,7 @@ This repo includes the lexical implementation for  C-Minus-Minus  Project at Tra
 
 ## How to run
 
-Running using JRE 8
+Running using JRE 8 and py 3.10
 
 ## History
 
