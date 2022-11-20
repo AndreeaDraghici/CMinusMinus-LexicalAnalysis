@@ -1,0 +1,85 @@
+*****************************************
+C Minus Minus Lexical Analyzer Result:
+*****************************************
+
+          RESERVED WORD: int
+          IDENTIFIER (ID): x
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): Calc
+        TERMINAL SYMBOL: (
+          RESERVED WORD: int
+          IDENTIFIER (ID): i
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): j
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): k
+      TERMINAL SYMBOL: ,
+          RESERVED WORD: int
+          IDENTIFIER (ID): h
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          RESERVED WORD: return
+          IDENTIFIER (ID): i
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): j
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
+          RESERVED WORD: void
+          IDENTIFIER (ID): main
+        TERMINAL SYMBOL: (
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          RESERVED WORD: int
+          IDENTIFIER (ID): b
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): a
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: int
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): string
+          IDENTIFIER (ID): aux
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: bool
+          IDENTIFIER (ID): Mere
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: =
+          IDENTIFIER (ID): a
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): a
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): aux
+      TERMINAL SYMBOL: =
+          NUMERIC: 3
+       TERMINAL SYMBOL: +
+          NUMERIC: 2
+      TERMINAL SYMBOL: ;
+          IDENTIFIER (ID): Mere
+      TERMINAL SYMBOL: =
+          RESERVED WORD: false
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: if
+        TERMINAL SYMBOL: (
+          NUMERIC: 5
+        TERMINAL SYMBOL: )
+        TERMINAL SYMBOL: {
+          IDENTIFIER (ID): c
+      TERMINAL SYMBOL: =
+          IDENTIFIER (ID): a
+       TERMINAL SYMBOL: +
+          IDENTIFIER (ID): b
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
+          IDENTIFIER (ID): Calc
+        TERMINAL SYMBOL: (
+        TERMINAL SYMBOL: )
+      TERMINAL SYMBOL: ;
+          RESERVED WORD: return
+          NUMERIC: 7
+      TERMINAL SYMBOL: ;
+        TERMINAL SYMBOL: }
