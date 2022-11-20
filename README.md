@@ -9,7 +9,7 @@ Running using JRE 8
 
 **The repository contains:**
 
-1. Lexical analyzer using hand coded implementation (Java implementation):
+### **1. Lexical analyzer using hand coded implementation (Java implementation):**
 -----------------------------
 
 - C-- requirements and specifications document.
@@ -20,8 +20,9 @@ Running using JRE 8
 
 - Test files.
 
+------------------------------
 
-2. Lexical analyzer using scanner generators (Python implementation):
+### **2. Lexical analyzer using scanner generators (Python implementation):**
 -----------------------------
 
 What needs to be loaded:
