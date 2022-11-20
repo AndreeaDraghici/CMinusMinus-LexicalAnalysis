@@ -1,0 +1,6 @@
+int main(){
+
+cout<<"This is a sample test";
+
+return 0;
+}

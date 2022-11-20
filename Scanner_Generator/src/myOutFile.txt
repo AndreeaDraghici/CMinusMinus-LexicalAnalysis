@@ -1,0 +1,31 @@
+------------ C Minus Minus LEXICAL ANALYZER USING SCANNER GENERATORS ------------
+
+------------ PRINT ALL CONTENTS OF INPUT FILE ------------ 
+int main(){
+
+cout<<"This is a sample test";
+
+return 0;
+}
+
+------------ LEX TOKENS ARE ------------ 
+
+LexToken(IDENT,'INT',1,0)
+LexToken(IDENT,'MAIN',1,4)
+LexToken(LPAREN,'(',1,8)
+LexToken(RPAREN,')',1,9)
+LexToken(LBRACE,'{',1,10)
+LexToken(IDENT,'COUT',1,13)
+LexToken(LSHIFT,'<<',1,17)
+ILLEGAL CHARACTER '"'
+LexToken(IDENT,'ID',1,20)
+LexToken(IDENT,'ID',1,25)
+LexToken(IDENT,'ID',1,28)
+LexToken(IDENT,'ID',1,30)
+LexToken(IDENT,'ID',1,37)
+ILLEGAL CHARACTER '"'
+LexToken(SEMICOLON,';',1,42)
+LexToken(IDENT,'RETURN',1,45)
+LexToken(INTCONST,0,1,52)
+LexToken(SEMICOLON,';',1,53)
+LexToken(RBRACE,'}',1,55)
