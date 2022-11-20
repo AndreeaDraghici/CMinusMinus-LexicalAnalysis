@@ -9,10 +9,12 @@ Running using JRE 8 and py 3.10
 
 **The repository contains:**
 
+- C-- requirements and specifications document.
+
 ### **1. Lexical analyzer using hand coded implementation (Java implementation):**
 -----------------------------
 
-- C-- requirements and specifications document.
+What needs to be loaded:
 
 - A document with lexical specifications, including finite automata.
 
