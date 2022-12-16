@@ -1,0 +1,10 @@
+ Token ?{
+ tLexeme ?=?int
+ tToken ? type ?=? IDENT 
+ tLValue ?=?int
+}
+ Token ?{
+ tLexeme ?=?int
+ tToken ? type ?=? IDENT 
+ tLValue ?=?int
+}

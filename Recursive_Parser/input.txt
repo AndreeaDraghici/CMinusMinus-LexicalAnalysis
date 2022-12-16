@@ -1,0 +1,15 @@
+int main () {
+int n , m ;
+double x , y ;
+n = 3;
+m = n + 4;
+x = 2.25;
+y = x * 2;
+if (m < y )
+m = n + 10;
+else {
+y = y * .5;
+x = x + 5.;
+}
+return 0;
+}
