@@ -35,6 +35,8 @@ What needs to be loaded:
 
 - A PDF document describing the source file(s).
 
+-------------------------------------
+
 ### **3. Syntax-directed translator using descendent recursive parsing (C++ implementation):**
 ---------------------------------------
 What needs to be loaded:
