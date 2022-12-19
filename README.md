@@ -1,9 +1,9 @@
 ## CMinusMinus-LexicalAnalysis
-This repo includes the lexical implementation for  C-Minus-Minus  Project at Translator Design laboratory.
+This repo includes the lexical and syntactic implementation for  C-Minus-Minus  Project at Translator Design laboratory.
 
 ## How to run
 
-Running using JRE 8 and py 3.10
+Running using JRE 8 and py 3.10 and ISO C++14 Standard
 
 ## History
 
