@@ -41,7 +41,7 @@ What needs to be loaded:
 ---------------------------------------
 What needs to be loaded:
 
-- An archive with the source files (.py files).
+- An archive with the source files (.cpp files).
 
 - An archive with test files.
 
