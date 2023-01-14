@@ -46,3 +46,19 @@ What needs to be loaded:
 - An archive with test files.
 
 - A PDF document describing the syntax-directed translator using descendent recursive parsing.
+
+-----------------------------------------------
+
+
+### **4. Syntax-directed translator (Python implementation):**
+---------------------------------------
+What needs to be loaded:
+
+- An archive with the source files (.py files).
+
+- An archive with test files.
+
+- A PDF document describing the syntax-directed translator.
+
+
+
